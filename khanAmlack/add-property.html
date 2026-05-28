@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>ثبت ملک</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body dir="rtl">
+
+<style>
+    .property-form{
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .property-form input{
+        font-weight: bold;
+        border: 2px solid #008000;
+    }
+</style>    
+
+<script>
+
+const user = JSON.parse(localStorage.getItem("user"));
+
+if(!user){
+
+alert("اول باید وارد شوید");
+
+location.href = "auth.html";
+
+}
+
+</script>
+
+<div class="form-container">
+
+<form id="propertyForm" class="property-form">
+
+<div class="step active">
+
+<h3>اطلاعات اصلی</h3>
+
+<input id="title" placeholder="عنوان آگهی" required>
+
+<input id="city" placeholder="شهر / محله" required>
+
+<select id="type" required>
+
+<option value="">نوع ملک</option>
+<option>آپارتمان</option>
+<option>ویلایی</option>
+<option>زمین</option>
+
+</select>
+
+<button type="button" class="next">بعدی</button>
+
+</div>
+
+
+<div class="step">
+
+<h3>مشخصات</h3>
+
+<input id="price" type="number" placeholder="قیمت" required>
+
+<input id="area" type="number" placeholder="متراژ" required>
+
+<input id="rooms" type="number" placeholder="اتاق" required>
+
+<button type="button" class="next">بعدی</button>
+
+<button type="button" class="prev">قبلی</button>
+
+</div>
+
+
+<div class="step">
+
+<h3>امکانات</h3>
+
+<label>
+<input type="checkbox" class="feature" value="پارکینگ">
+پارکینگ
+</label>
+
+<label>
+<input type="checkbox" class="feature" value="آسانسور">
+آسانسور
+</label>
+
+<label>
+<input type="checkbox" class="feature" value="انباری">
+انباری
+</label>
+
+<label>
+<input type="checkbox" class="feature" value="بالکن">
+بالکن
+</label>
+
+<button type="button" class="next">بعدی</button>
+
+<button type="button" class="prev">قبلی</button>
+
+</div>
+
+
+<div class="step">
+
+<h3>عکس و توضیحات</h3>
+
+<input type="file" id="image" accept="image/*" multiple required> 
+<img id="preview">
+
+<textarea id="desc" placeholder="توضیحات"></textarea>
+
+<button type="button" class="prev">قبلی</button>
+
+<button type="submit">ثبت آگهی</button>
+
+</div>
+
+</form>
+
+</div>
+
+<script src="add-property.js"></script>
+
+</body>
+</html>

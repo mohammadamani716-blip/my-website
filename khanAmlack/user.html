@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>پنل کاربری</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body dir="rtl">
+
+<header class="header">
+
+<div class="logo">
+پنل کاربری
+</div>
+
+<nav class="menu">
+
+<a href="index.html" class="menuu">
+خانه
+</a>
+
+<a href="add-property.html"
+class="add-property-btn">
+
+ثبت ملک
+
+</a>
+
+<a href="edit-profile.html"
+class="edit-btn">
+
+ویرایش پروفایل
+
+</a>
+
+<button onclick="logout()"
+class="exit">
+
+خروج
+
+</button>
+
+</nav>
+
+</header>
+
+
+
+<div class="user-page">
+
+<div class="profile-card">
+
+<div class="profile-top">
+
+<label class="avatar">
+
+<input type="file"
+id="profileInput"
+hidden>
+
+<img id="profileImage">
+
+</label>
+
+
+<div>
+
+<h2 id="fullName"></h2>
+
+<p id="username"></p>
+
+</div>
+
+</div>
+
+
+<div class="profile-info">
+
+<p>
+📍 شهر:
+<span id="city"></span>
+</p>
+
+<p>
+📧 ایمیل:
+<span id="email"></span>
+</p>
+
+<p>
+📱 شماره:
+<span id="phone"></span>
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="my-properties">
+
+<h2>
+آگهی‌های من
+</h2>
+
+<div id="myProperties">
+
+</div>
+
+</div>
+
+</div>
+
+<script src="user.js"></script>
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- لوگو -->
+<div class="footer-box">
+
+<h2 class="footer-logo">
+خان‌املاک
+</h2>
+
+<p class="footer-text">
+
+بهترین مرجع خرید، فروش
+و اجاره ملک در ایران
+
+</p>
+
+</div>
+
+
+
+<!-- دسترسی سریع -->
+<div class="footer-box">
+
+<h3>
+دسترسی سریع
+</h3>
+
+<a href="index.html">
+خرید و فروش
+</a>
+
+<a href="design.html">
+انواع دیزاین
+</a>
+
+<a href="experts.html">
+کارشناسان
+</a>
+
+</div>
+
+
+
+<!-- ارتباط -->
+<div class="footer-box">
+
+<h3>
+ارتباط با ما
+</h3>
+
+<p>
+📞 09123456789
+</p>
+
+<p>
+📧 info@khanamlak.ir
+</p>
+
+<p>
+📍 تهران، ایران
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="footer-bottom">
+
+© ۱۴۰۵ خان‌املاک | تمامی حقوق محفوظ است
+
+</div>
+
+</footer>
+
+</body>
+</html>

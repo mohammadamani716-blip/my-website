@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+
+<meta charset="UTF-8">
+
+<title>ورود | ثبت نام</title>
+
+<link rel="stylesheet" href="auth.css">
+
+</head>
+
+<body dir="rtl">
+
+<div class="container">
+
+<div class="card">
+
+<h2 id="form-title">ورود</h2>
+
+<!-- فرم ورود -->
+<div id="login-form">
+
+<input type="text"
+id="loginUsername"
+placeholder="نام کاربری"
+required>
+
+<input type="password"
+id="loginPassword"
+placeholder="رمز عبور"
+required>
+
+<button onclick="login()"
+class="submit-btn">
+ورود
+</button>
+
+</div>
+
+
+<!-- فرم ثبت نام -->
+<div id="register-form"
+style="display:none;">
+
+<input type="text"
+id="firstName"
+placeholder="نام"
+required>
+
+<input type="text"
+id="lastName"
+placeholder="نام خانوادگی"
+required>
+
+<input type="text"
+id="registerUsername"
+placeholder="نام کاربری"
+required>
+
+<input type="text"
+id="phone"
+placeholder="شماره موبایل"
+required>
+
+<input type="email"
+id="email"
+placeholder="ایمیل"
+required>
+
+<input type="text"
+id="city"
+placeholder="شهر"
+required>
+
+<input type="password"
+id="registerPassword"
+placeholder="رمز عبور"
+required>
+
+<button onclick="register()"
+class="submit-btn">
+ثبت نام
+</button>
+
+</div>
+
+
+<p id="toggle-text">
+
+<span id="toggle-label">
+حساب ندارید؟
+</span>
+
+<span onclick="toggleForm()"
+class="toggle-btn">
+ثبت نام
+</span>
+
+</p>
+
+</div>
+
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+</html>

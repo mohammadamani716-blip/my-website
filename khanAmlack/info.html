@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>جزئیات ملک</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body dir="rtl">
+
+<div class="container" id="detail"></div>
+
+<script>
+
+const params = new URLSearchParams(location.search);
+const id = Number(params.get('id'));
+
+const properties =
+JSON.parse(localStorage.getItem('properties')) || [];
+
+const p = properties.find(x => x.id === id);
+
+if(p){
+
+document.getElementById('detail').innerHTML = `
+
+<div class="property-card-full">
+
+<img src="${p.image}" class="full-img">
+
+<h2>${p.title}</h2>
+
+<p>${p.city} - ${p.type}</p>
+
+<p>
+${p.area} متر |
+${p.rooms} اتاق
+</p>
+
+<p>${p.desc}</p>
+
+<p>
+امکانات:
+${p.facilities.join('، ')}
+</p>
+
+<h3 class="price">
+${Number(p.price).toLocaleString()} تومان
+</h3>
+
+</div>
+
+`;
+
+}
+
+</script>
+
+</body>
+</html>
